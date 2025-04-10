@@ -211,7 +211,7 @@ async function search() {
                 .replace(/>/g, '&gt;')
                 .replace(/"/g, '&quot;');
             const sourceInfo = item.source_name ? 
-                `<span class="bg-[#222] text-xs px-2 py-1 rounded-full">${item.source_name}</span>` : '';
+                `<span class="bg-[#e4edfb] text-xs px-2 py-1 rounded-full">${item.source_name}</span>` : '';
             const sourceCode = item.source_code || currentApiSource;
             
             // 重新设计的卡片布局 - 支持更好的封面图显示
@@ -420,7 +420,7 @@ function renderEpisodes(vodName) {
         const realIndex = episodesReversed ? currentEpisodes.length - 1 - index : index;
         return `
             <button id="episode-${realIndex}" onclick="playVideo('${episode}','${vodName.replace(/"/g, '&quot;')}', ${realIndex})" 
-                    class="px-4 py-2 bg-[#222] hover:bg-[#333] border border-[#333] rounded-lg transition-colors text-center episode-btn">
+                    class="px-4 py-2 bg-[#f7fafe] hover:bg-[#ccddf8] border border-[#ccddf8] rounded-lg transition-colors text-center episode-btn">
                 第${realIndex + 1}集
             </button>
         `;
